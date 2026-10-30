@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-surface-scan = mcp_surface_scan:main

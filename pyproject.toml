@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-surface-scan"
+version = "0.1.0"
+description = "Read-only reconnaissance of publicly advertised MCP tool manifests."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Chimaobi Kanu", email = "c.kanu@mainnoltd.com" }]
+keywords = ["mcp", "model-context-protocol", "security", "ai-agents", "recon", "tool-manifest"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Software Development :: Testing",
+]
+# fastmcp is only imported inside the scan path, so --help and --version work without it.
+dependencies = ["fastmcp>=2.0"]
+
+[project.urls]
+Homepage = "https://mainnoltd.com/products/surface-scan/"
+Repository = "https://github.com/chimaobikanu/mcp-surface-scan"
+"Public survey" = "https://mainnoltd.com/research/mcp-surface-survey/"
+Issues = "https://github.com/chimaobikanu/mcp-surface-scan/issues"
+
+[project.scripts]
+mcp-surface-scan = "mcp_surface_scan:main"
+
+[tool.setuptools]
+py-modules = ["mcp_surface_scan"]

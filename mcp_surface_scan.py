@@ -38,6 +38,8 @@ import pathlib
 import re
 import sys
 
+__version__ = "0.1.0"
+
 try:
     from fastmcp import Client
 except ImportError:  # pragma: no cover
@@ -241,6 +243,8 @@ def main() -> int:
     parser.add_argument("--out", help="write full JSON results here")
     parser.add_argument("--json-only", action="store_true", help="print JSON, no report")
     parser.add_argument("--concurrency", type=int, default=6)
+    parser.add_argument("--version", action="version",
+                        version=f"mcp-surface-scan {__version__}")
     args = parser.parse_args()
     return asyncio.run(main_async(args))
 

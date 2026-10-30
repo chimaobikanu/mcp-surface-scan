@@ -36,10 +36,18 @@ carry, and how much of it is destructive?**
 ## Install
 
 ```bash
-pip install fastmcp
-git clone <this repo> && cd mcp-surface-scan
-python mcp_surface_scan.py --url https://example.com/mcp
+# from the release wheel (no PyPI account needed)
+pip install https://github.com/chimaobikanu/mcp-surface-scan/releases/download/v0.1.0/mcp_surface_scan-0.1.0-py3-none-any.whl
+
+# or straight from the repo
+pip install "git+https://github.com/chimaobikanu/mcp-surface-scan"
+
+# then, either way
+mcp-surface-scan --url https://example.com/mcp
 ```
+
+`fastmcp` is the only runtime dependency and it is imported only when a scan actually
+runs, so `mcp-surface-scan --help` and `--version` work before it is installed.
 
 ## Usage
 

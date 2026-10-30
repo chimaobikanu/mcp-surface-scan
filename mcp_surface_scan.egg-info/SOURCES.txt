@@ -1,0 +1,10 @@
+LICENSE
+README.md
+mcp_surface_scan.py
+pyproject.toml
+mcp_surface_scan.egg-info/PKG-INFO
+mcp_surface_scan.egg-info/SOURCES.txt
+mcp_surface_scan.egg-info/dependency_links.txt
+mcp_surface_scan.egg-info/entry_points.txt
+mcp_surface_scan.egg-info/requires.txt
+mcp_surface_scan.egg-info/top_level.txt
